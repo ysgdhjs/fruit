@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?><!-- 文档声明 -->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd"><!-- 约束声明 -->
+
+<!-- mybatis的全局配置文件 -->
+<configuration>
+
+<typeAliases>
+    <package name="com.yu.pojo"/>
+</typeAliases>
+    <mappers>
+        <mapper class="com.yu.dao.ShopMapper"/>
+    </mappers>
+
+</configuration>

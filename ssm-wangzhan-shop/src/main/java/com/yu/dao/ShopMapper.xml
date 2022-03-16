@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?><!-- 文档声明 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"><!-- 约束声明 -->
+
+<mapper namespace="com.yu.dao.ShopMapper">
+<!--    <insert id="add" parameterType="Shop">-->
+<!--        insert into wangzhan.shop(name,price)values (#{name},#{price})-->
+<!--    </insert>-->
+    <delete id="delete" parameterType="int">
+        delete from wangzhan.shop where id=#{id}
+    </delete>
+    <select id="query" resultType="Shop">
+        select *from wangzhan.shop where id=#{id}
+    </select>
+    <select id="queryAll" resultType="Shop">
+        select *from wangzhan.shop
+    </select>
+    <update id="update" parameterType="Shop">
+        update wangzhan.shop set name=#{name},price=#{price} where id=#{id}
+    </update>
+    <insert id="add" parameterType="Shop">
+        insert into wangzhan.shop(name,price)values (#{name},#{price});
+    </insert>
+    <select id="queryByName" resultType="Shop">
+           select *from wangzhan.shop where name=#{name}
+    </select>
+
+</mapper>
